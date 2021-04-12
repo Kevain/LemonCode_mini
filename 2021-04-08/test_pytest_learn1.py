@@ -6,6 +6,8 @@
 """
 import time
 
+import pytest
+
 
 def add(x, y):
     return x + y
@@ -18,5 +20,9 @@ def test_add():
 def test_add2():
     print("2222222222222")
     time.sleep(3)
-    assert add(1.1, 3.2) == 4.3
+    assert add(11, 3) == 14.1
     assert add(4, 4) == 8
+
+
+if __name__ == '__main__':
+    pytest.main(['-s', 'test_pytest_learn1.py'])  # 调用pytest的main函数执行测试
